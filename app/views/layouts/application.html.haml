@@ -10,12 +10,17 @@
   %body
     %header 
       .title
-        mycloset
+        = link_to root_path, class: "title" do
+          mycloset
       .title__right
-        .sign-up
-          新規登録
-        .login
-          ログイン
+        .sign-up-btn
+          = link_to "新規登録", new_user_registration_path, class: "header-btn"
+        .login-btn
+          = link_to "ログイン", new_user_session_path, class: "header-btn"
+        .logout-btn
+          = link_to "ログアウト", destroy_user_session_path, class: "header-btn"
+        -# .my-page-btn
+        -#   = link_to "マイページ", user_path(current_user), class: "header-btn"
 
 
     = yield
