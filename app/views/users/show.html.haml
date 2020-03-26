@@ -2,7 +2,7 @@
 
   .user__details
     .user__details__image
-      = image_tag src="/assets/user-details.jpg", width: "250"
+      = image_tag src="/assets/user-details.jpg"
     .user__details__profiles
       .user__details__profiles__top
         .user__details__profiles__top__name
@@ -19,7 +19,7 @@
           アイテム 20件
       .user__details__profiles__bottom
         .user__details__profiles__bottom__text
-          よろしくお願いします
+          = current_user.text
 
   .user__items
     .user__items__text
