@@ -1,0 +1,107 @@
+.my-page
+  -# .my-page__contents
+
+  .user__details
+    .user__details__image
+      = image_tag src="/assets/user-details.jpg", width: "250"
+    .user__details__profiles
+      .user__details__profiles__top
+        .user__details__profiles__top__name
+          mai
+        .user__details__profiles__top__edit
+          .user__details__profiles__top__edit__icon
+            = icon("fas", "cog")
+          .user__details__profiles__top__edit__text
+            = link_to "プロフィールを編集する", edit_user_path, class: "edit-btn"
+      .user__details__profiles__middle
+        .user__details__profiles__middle__outfits-count
+          投稿 20件
+        .user__details__profiles__middle__item-count
+          アイテム 20件
+      .user__details__profiles__bottom
+        .user__details__profiles__bottom__text
+          よろしくお願いします
+
+  .user__items
+    .user__items__text
+      最近追加したアイテム
+    .user__items__content
+      .user__items__content__details
+        .user__items__content__details__image
+          =image_tag src="/assets/mypage-item1.jpg", width:"180"
+        .user__items__content__details__text
+          .user__items__content__details__text__brand
+            MERCURYDUO
+          .user__items__content__details__text__name
+            レーススカート
+
+      .user__items__content__details
+        .user__items__content__details__image
+          =image_tag src="/assets/mypage-item2.jpg", width:"180"
+        .user__items__content__details__text
+          .user__items__content__details__text__brand
+            MERCURYDUO
+          .user__items__content__details__text__name
+            シフォンワンピース
+
+      .user__items__content__details
+        .user__items__content__details__image
+          =image_tag src="/assets/mypage-item3.jpg", width:"180"
+        .user__items__content__details__text
+          .user__items__content__details__text__brand
+            MERCURYDUO
+          .user__items__content__details__text__name
+            レースブラウス
+
+      .user__items__content__details
+        .user__items__content__details__image
+          =image_tag src="/assets/mypage-item4.jpg", width:"180"
+        .user__items__content__details__text
+          .user__items__content__details__text__brand
+            MERCURYDUO
+          .user__items__content__details__text__name
+            クリアバッグ
+
+      .user__items__content__details
+        .user__items__content__details__image
+          =image_tag src="/assets/mypage-item5.jpg", width:"180"
+        .user__items__content__details__text
+          .user__items__content__details__text__brand
+            snidel
+          .user__items__content__details__text__name
+            コルクサンダル
+
+      .user__items__content__details
+        .user__items__content__details__image
+          =image_tag src="/assets/mypage-item6.jpg", width:"180"
+        .user__items__content__details__text
+          .user__items__content__details__text__brand
+            snidel
+          .user__items__content__details__text__name
+            ブラウス
+
+    .user__items__bottom
+      もっと見る
+
+  .user__outfits
+    .user__outfits__text
+      コーディネート
+    .user__outfits__content
+      .user__outfits__content__top
+        .user__outfits__content__top__image
+          =image_tag src="/assets/user-outfits1.jpg", width:"280"
+        .user__outfits__content__top__image
+          =image_tag src="/assets/user-outfits2.jpg", width:"280"
+        .user__outfits__content__top__image
+          =image_tag src="/assets/user-outfits3.jpg", width:"280"
+        .user__outfits__content__top__image
+          =image_tag src="/assets/user-outfits4.jpg", width:"280"
+      .user__outfits__content__bottom
+        .user__outfits__content__bottom__image
+          =image_tag src="/assets/user-outfits5.jpg", width:"280"
+        .user__outfits__content__bottom__image
+          =image_tag src="/assets/user-outfits6.jpg", width:"280"
+        .user__outfits__content__bottom__image
+          =image_tag src="/assets/user-outfits7.jpg", width:"280"
+        .user__outfits__content__bottom__image
+          =image_tag src="/assets/user-outfits8.jpg", width:"280"
