@@ -2,7 +2,7 @@
 
   .user__details
     .user__details__image
-      = image_tag src="/assets/user-details.jpg"
+      = image_tag current_user.image.url, class: "my-page-image"
     .user__details__profiles
       .user__details__profiles__top
         .user__details__profiles__top__name
