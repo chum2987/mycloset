@@ -3,6 +3,12 @@ class UsersController < ApplicationController
   def show
   end
 
+  def new
+  end
+
+  def create
+  end
+
   def edit
     @user = User.find(params[:id])
   end
@@ -16,7 +22,7 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:name, :email, :image, :text).merge(id: current_user.id)
+    params.require(:user).permit(:name, :email, :image, :text)
   end
   
 end
