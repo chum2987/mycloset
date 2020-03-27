@@ -14,8 +14,8 @@
           mycloset
       .title__right
         - if user_signed_in?
-          .logout-btn
-            = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header-btn"
+          -# .logout-btn
+          -#   = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header-btn"
           .my-page-btn
             = link_to "マイページ", user_path(current_user), class: "header-btn"
         - else
