@@ -338,4 +338,83 @@
       }
     }    
   }
+  .new-outfits {
+    padding-top: 64px;
+
+    &__content {
+      margin: 50px 250px;
+      padding: 100px;
+      border: solid 3px rgb(219, 216, 216);
+      border-radius: 10px;
+      // background-color: pink;
+      height: 600px;
+
+      &__main {
+        display: flex;
+        // background-color: white;
+
+        &__left {
+
+          &__post-image {
+            width: 280px;
+            height: 350px;
+            margin-left: 30px;
+            border: solid 1px gray;
+            position: relative;
+
+            .image-icon {
+              cursor: pointer;
+              position: absolute;
+              top: 130px;
+              left: 100px;
+              
+
+              .post-icon {
+                font-size: 80px;
+                color: rgb(231, 230, 230);
+              }
+              
+              .file_field {
+                display: none;
+              }
+            }       
+          }         
+        }
+
+        &__right {
+          margin-left: 100px;
+
+          &__items {
+
+            .text_area {
+              width: 250px;
+              height: 250px;
+              margin-top: 20px;
+            }
+          }
+
+          &__text {
+
+            .text_field {
+              width: 250px;
+              margin-top: 20px;
+            }
+          }
+
+        }
+      }
+    }
+        &__send-btn {
+          display: flex;
+
+          .submit {
+            margin: 0 auto;
+            width: 100px;
+            height: 50px;
+            background-color: rgb(235, 201, 158);
+            color: white;
+            margin-top: 60px;
+          }
+        }
+  }
 }
