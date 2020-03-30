@@ -87,21 +87,7 @@
     .user__outfits__text
       コーディネート
     .user__outfits__content
-      .user__outfits__content__top
-        .user__outfits__content__top__image
-          =image_tag src="/assets/user-outfits1.jpg", width:"280"
-        .user__outfits__content__top__image
-          =image_tag src="/assets/user-outfits2.jpg", width:"280"
-        .user__outfits__content__top__image
-          =image_tag src="/assets/user-outfits3.jpg", width:"280"
-        .user__outfits__content__top__image
-          =image_tag src="/assets/user-outfits4.jpg", width:"280"
-      .user__outfits__content__bottom
-        .user__outfits__content__bottom__image
-          =image_tag src="/assets/user-outfits5.jpg", width:"280"
-        .user__outfits__content__bottom__image
-          =image_tag src="/assets/user-outfits6.jpg", width:"280"
-        .user__outfits__content__bottom__image
-          =image_tag src="/assets/user-outfits7.jpg", width:"280"
-        .user__outfits__content__bottom__image
-          =image_tag src="/assets/user-outfits8.jpg", width:"280"
+      - @outfits.each do |outfit|
+        = image_tag outfit.image.url, class: "mypage-outfits"
+
+
