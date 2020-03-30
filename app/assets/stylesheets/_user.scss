@@ -261,6 +261,7 @@
 
   .user__outfits {
     width: 100%;
+    height: 500px;
     // background-color: rgb(206, 202, 202);
     padding: 30px;
 
@@ -270,15 +271,29 @@
 
     &__content {
       margin-top: 20px;
-      // background-color: pink;
 
+      &__top {
+        display: flex;
+        justify-content: space-between;
 
-      .mypage-outfits {
-        width: 280px;
-        margin-left: 10px;
-        margin-bottom: 10px;
+        &__image {
+  
+        }
       }
+
+      &__bottom {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+
+        &__image {
+
+        }
+      }
+
     }
+
+    
   }
 }
 
