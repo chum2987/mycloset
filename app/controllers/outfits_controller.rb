@@ -9,11 +9,12 @@ class OutfitsController < ApplicationController
 
   def create
     Outfit.create(outfit_params)
-    redirect_to root_path
+    redirect_to user_path(current_user)
     
   end
 
   private
+
   def outfit_params
     params.require(:outfit).permit(:image, :text, :content).merge(user_id: current_user.id)
   end
