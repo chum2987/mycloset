@@ -1,0 +1,13 @@
+.new-item
+  = form_for @item do |f|
+    .new-item__content
+      .new-item__content__top
+        = f.label :image, class: "item-icon" do
+          = icon("far", "image", class: "icon")
+          = f.file_field :image, class: "file"
+      .new-item__content__bottom
+        .new-item__content__bottom__text
+          = f.text_field :text, placeholder: "説明", class: "item-text-box"
+        .new-item__content__bottom__send-btn
+          = f.submit "send", class: "item-send"
+      

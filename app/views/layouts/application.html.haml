@@ -18,6 +18,8 @@
             = link_to "投稿する", new_outfit_path, class: "header-btn"
           .my-page-btn
             = link_to "マイページ", user_path(current_user), class: "header-btn"
+          .item-btn
+            = link_to "アイテム", new_item_path, class: "header-btn"
         - else
           .sign-up-btn
             = link_to "新規登録", new_user_registration_path, class: "header-btn"

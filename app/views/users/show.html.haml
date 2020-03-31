@@ -22,63 +22,18 @@
         .user__details__profiles__bottom__text
           = current_user.text
 
-  .user__items
+  .user__items 
     .user__items__text
       最近追加したアイテム
     .user__items__content
-      .user__items__content__details
-        .user__items__content__details__image
-          =image_tag src="/assets/mypage-item1.jpg", width:"180"
-        .user__items__content__details__text
-          .user__items__content__details__text__brand
-            MERCURYDUO
-          .user__items__content__details__text__name
-            レーススカート
-
-      .user__items__content__details
-        .user__items__content__details__image
-          =image_tag src="/assets/mypage-item2.jpg", width:"180"
-        .user__items__content__details__text
-          .user__items__content__details__text__brand
-            MERCURYDUO
-          .user__items__content__details__text__name
-            シフォンワンピース
-
-      .user__items__content__details
-        .user__items__content__details__image
-          =image_tag src="/assets/mypage-item3.jpg", width:"180"
-        .user__items__content__details__text
-          .user__items__content__details__text__brand
-            MERCURYDUO
-          .user__items__content__details__text__name
-            レースブラウス
-
-      .user__items__content__details
-        .user__items__content__details__image
-          =image_tag src="/assets/mypage-item4.jpg", width:"180"
-        .user__items__content__details__text
-          .user__items__content__details__text__brand
-            MERCURYDUO
-          .user__items__content__details__text__name
-            クリアバッグ
-
-      .user__items__content__details
-        .user__items__content__details__image
-          =image_tag src="/assets/mypage-item5.jpg", width:"180"
-        .user__items__content__details__text
-          .user__items__content__details__text__brand
-            snidel
-          .user__items__content__details__text__name
-            コルクサンダル
-
-      .user__items__content__details
-        .user__items__content__details__image
-          =image_tag src="/assets/mypage-item6.jpg", width:"180"
-        .user__items__content__details__text
-          .user__items__content__details__text__brand
-            snidel
-          .user__items__content__details__text__name
-            ブラウス
+      - @items.each do |item|
+        .user__items__content__details
+          = image_tag item.image.url
+          .user__items__content__details__text
+            .user__items__content__details__text__brand
+              MERCURYDUO
+            .user__items__content__details__text__name
+              = item.text
 
     .user__items__bottom
       もっと見る

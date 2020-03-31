@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(current_user[:id])
     @outfits = @user.outfits.all.order("created_at DESC")
+    @items = @user.items.all.order(created_at: :desc).limit(6)
   end
 
   def edit
@@ -20,5 +21,6 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:name, :email, :image, :text)
   end
+
   
 end
