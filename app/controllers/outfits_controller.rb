@@ -1,6 +1,7 @@
 class OutfitsController < ApplicationController
 
   def index
+    @outfits = Outfit.all.order("created_at DESC")
   end
 
   def new

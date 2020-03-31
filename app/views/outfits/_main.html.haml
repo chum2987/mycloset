@@ -89,6 +89,7 @@
     -#                 = icon("far", "heart")
     -#               .item-likes__count
                     -# 100
+
     .user__ranking
       .user__ranking__top
         .user__ranking__top__icon
@@ -127,43 +128,27 @@
                 = icon("far", "heart")
               .popular-user-likes__count
                 100
+
+
     .new__outfits
       .new__outfits__top
         .new__outfits__top__image
           = icon("fas", "crown")
         .new__outfits__top__text
           新着コーディネート
-      .new__outfits__details
-        .new__outfits__details__image
-          =image_tag src="/assets/new-outfits1.jpg", width: "220"
-          .new__outfits__details__image__bottom
-            .new-outfits__user-name
-              chihiro
-            .new-outfits__likes
-              .new-outfits__likes__icon
-                = icon("far", "heart")
-              .new-outfits__likes__count
-                100        
-        .new__outfits__details__image
-          =image_tag src="/assets/new-outfits2.jpg", width: "220"
-          .new__outfits__details__image__bottom
-            .new-outfits__user-name
-              chihiro
-            .new-outfits__likes
-              .new-outfits__likes__icon
-                = icon("far", "heart")
-              .new-outfits__likes__count
-                100
-        .new__outfits__details__image
-          =image_tag src="/assets/new-outfits3.jpg", width: "220"
-          .new__outfits__details__image__bottom
-            .new-outfits__user-name
-              chihiro
-            .new-outfits__likes
-              .new-outfits__likes__icon
-                = icon("far", "heart")
-              .new-outfits__likes__count
-                100
+      %ul.new__outfits__contents
+        - @outfits.each do |outfit|
+          %li.content
+            = image_tag outfit.image.url
+            .content__text
+              .content__text__user-name
+                = outfit.user.name
+              .content__text__outfits-likes
+                .content__text__outfits-likes__icon
+                  = icon("far", "heart")
+                .content__text__outfits-likes__count
+                  100        
+
     -# .search
     -#   .search__top
     -#     .search__top__icon

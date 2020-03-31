@@ -56,20 +56,21 @@
   
   .wrapper {
     display: flex;
-    margin: 0 200px;
+    margin: 0 100px;
     padding-top: 64px;
 
     // サイドバー
-    .sidebar {
-      width: 300px;
-      height: 100%;
+    // .sidebar {
+    //   width: 300px;
+    //   height: 100%;
       // background-color: rgb(236, 248, 255);
       
-    }
+    // }
     
     // メイン
     .main {
-      width: calc(100vw - 300px);
+      // width: calc(100vw - 300px);
+      width: 100%;
       height: 100%;
       // background-color: rgb(255, 242, 252);
 
@@ -130,61 +131,61 @@
         }
 
         // アイテムランキング
-        .item__ranking {
-          width: 100%;
-          height: 400px;
-          // background-color: rgb(235, 231, 231);
-          margin-bottom: 20px;
+        // .item__ranking {
+        //   width: 100%;
+        //   height: 400px;
+        //   // background-color: rgb(235, 231, 231);
+        //   margin-bottom: 20px;
 
-          &__top {
-            display: flex;
+        //   &__top {
+        //     display: flex;
 
-            &__icon {
+        //     &__icon {
 
-            }
+        //     }
 
-            &__text {
-              margin-left: 5px;
-            }
-          }
+        //     &__text {
+        //       margin-left: 5px;
+        //     }
+        //   }
 
-          &__details {
-            display: flex;
-            justify-content: space-around;
-            padding-top: 10px;
+        //   &__details {
+        //     display: flex;
+        //     justify-content: space-around;
+        //     padding-top: 10px;
             
-            &__image {
+        //     &__image {
               
-              &__bottom {
+        //       &__bottom {
                 
-                .item-brand {
+        //         .item-brand {
         
-                  .bottom-text {
-                    display: flex;
-                    justify-content: space-between;
+        //           .bottom-text {
+        //             display: flex;
+        //             justify-content: space-between;
 
-                    .item-name {
+        //             .item-name {
                       
-                    }
+        //             }
   
-                    .item-likes {
-                      display:flex;
+        //             .item-likes {
+        //               display:flex;
 
-                      &__icon {
+        //               &__icon {
 
-                      }
+        //               }
 
-                      &__count {
+        //               &__count {
 
-                      }
+        //               }
                      
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
+        //             }
+        //           }
+        //         }
+        //       }
+        //     }
+        //   }
+        // }
 
         // ユーザーランキング
         .user__ranking {
@@ -241,8 +242,6 @@
         }
         // 新着コーデ
         .new__outfits {
-          width: 100%;
-          height: 400px;
           // background-color: rgb(235, 231, 231);
           margin-bottom: 20px;
 
@@ -257,35 +256,57 @@
               margin-left: 5px;
             }
           }
-          &__details {
-            display: flex;
-            justify-content: space-around;
-            padding-top: 10px;
 
-            &__image {
+          ul {
+            width: 1200px;
 
-              &__bottom {
+            li {
+              float: left
+  
+            }
+          }
+
+          &__contents {
+            
+            .content {
+              width: 280px;
+              margin-left: 20px;
+              margin-bottom: 10px;
+
+              img {
+                width: 280px;
+              }
+
+              &__text {
                 display: flex;
                 justify-content: space-between;
-
-                .new-outfits__user-name {
-
+                margin: 0 20px;
+  
+                &__user-name {
+  
                 }
-
-                .new-outfits__likes {
+  
+                &__outfits-likes {
                   display: flex;
-
+  
                   &__icon {
-
+  
                   }
-
+  
                   &__count {
-
+  
                   }
-                }         
+                }
               }
-            }   
+            }
+
           }
+          
+
+          
+
+          
+          
         }
 
         .search {
