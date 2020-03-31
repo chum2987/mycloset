@@ -55,3 +55,19 @@
     }
   }
 }
+
+.my-closet {
+  padding-top: 64px;
+  // background-color: pink;
+  margin: 0 100px;
+
+  &__content {
+    margin: 0 auto;
+    width: 1200px;
+    margin-top: 30px;
+
+    .closet-image {
+      margin-bottom: 30px;
+    }
+  }
+}

@@ -36,7 +36,7 @@
               = item.text
 
     .user__items__bottom
-      もっと見る
+      = link_to "もっと見る", closet_item_path(@user), class: "user__items__bottom__text"
 
   .user__outfits
     .user__outfits__text

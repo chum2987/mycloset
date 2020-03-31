@@ -1,0 +1,5 @@
+.my-closet
+  .my-closet__content
+    - @items.each do |item|
+      = image_tag item.image.url, class: "closet-image"
+

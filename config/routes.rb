@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   root to: "outfits#index"
   resources :outfits, only: [:index, :new, :create]
   resources :users, only: [:show, :edit, :update] 
-  resources :items, only:[:new, :create]
+  resources :items, only:[:new, :create] do
+    member do
+      get 'closet'
+    end
+  end
 
 end

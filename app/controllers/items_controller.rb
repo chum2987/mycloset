@@ -9,6 +9,11 @@ class ItemsController < ApplicationController
   redirect_to user_path(current_user)
   end
 
+  def closet
+    user = User.find(params[:id])
+    @items = user.items.all.order(created_at: :desc)
+  end
+
   private
 
   def item_params
