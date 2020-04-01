@@ -2,12 +2,12 @@
 
   .user__details
     .user__details__image
-      = image_tag current_user.image.url, class: "my-page-image"
+      = image_tag @user.image.url, class: "my-page-image"
       -# = image_tag src="/assets/image1.jpg", width:"400"
     .user__details__profiles
       .user__details__profiles__top
         .user__details__profiles__top__name
-          =current_user.name
+          = @user.name
         .user__details__profiles__top__edit
           .user__details__profiles__top__edit__icon
             = icon("fas", "cog")
@@ -20,7 +20,7 @@
           アイテム 20件
       .user__details__profiles__bottom
         .user__details__profiles__bottom__text
-          = current_user.text
+          = @user.text
 
   .user__items 
     .user__items__text

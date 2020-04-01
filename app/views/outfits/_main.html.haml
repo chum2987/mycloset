@@ -139,10 +139,11 @@
       %ul.new__outfits__contents
         - @outfits.each do |outfit|
           %li.content
-            = image_tag outfit.image.url
+            = link_to (image_tag outfit.image.url), outfit_path(outfit.id)
             .content__text
               .content__text__user-name
-                = outfit.user.name
+                -# = outfit.user.name
+                = link_to outfit.user.name, user_path(outfit.user)
               .content__text__outfits-likes
                 .content__text__outfits-likes__icon
                   = icon("far", "heart")

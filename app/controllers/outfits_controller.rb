@@ -2,6 +2,7 @@ class OutfitsController < ApplicationController
 
   def index
     @outfits = Outfit.all.order("created_at DESC")
+    # @users = User.all
   end
 
   def new
@@ -11,7 +12,10 @@ class OutfitsController < ApplicationController
   def create
     Outfit.create(outfit_params)
     redirect_to user_path(current_user)
-    
+  end
+
+  def show
+    @outfit = Outfit.find(params[:id])
   end
 
   private

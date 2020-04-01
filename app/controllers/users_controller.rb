@@ -1,10 +1,14 @@
 class UsersController < ApplicationController
 
   def show
-    user = User.find(current_user[:id])
-    @outfits = user.outfits.all.order("created_at DESC")
-    @items = user.items.all.order(created_at: :desc).limit(6)
+    # user = User.find(current_user[:id])
+    # @outfits = user.outfits.all.order("created_at DESC")
+    # @items = user.items.all.order(created_at: :desc).limit(6)
+    # @user = User.find(params[:id])
     @user = User.find(params[:id])
+    @outfits = @user.outfits.all.order("created_at DESC")
+    @items = @user.items.all.order(created_at: :desc).limit(6)
+
   end
 
   def edit

@@ -283,7 +283,11 @@
                 margin: 0 20px;
   
                 &__user-name {
-  
+                  
+                  a {
+                    text-decoration: none;
+                    color: black;
+                  }
                 }
   
                 &__outfits-likes {
