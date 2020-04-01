@@ -1,5 +1,5 @@
 .my-closet
   .my-closet__content
     - @items.each do |item|
-      = image_tag item.image.url, class: "closet-image"
+      = link_to (image_tag item.image.url), item_path(item.id), class: "closet-image"
 

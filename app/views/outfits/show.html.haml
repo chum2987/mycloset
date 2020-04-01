@@ -1,0 +1,22 @@
+.outfits-details
+  .outfits-details__content
+    .outfits-details__content__left
+      .outfits-details__content__left__image
+        = image_tag @outfit.image.url
+      .outfits-details__content__left__text
+        = @outfit.text
+      .outfits-details__content__left__date
+        = @outfit.created_at
+    .outfits-details__content__right
+      - @outfit.item_outfits.each do |item_outfit|
+        .outfits-details__content__right__items
+          .outfits-details__content__right__items__item
+            = image_tag item_outfit.item.image.url
+          .outfits-details__content__right__items__text
+            .outfits-details__content__right__items__text__brand
+              = item_outfit.item.brand
+            .outfits-details__content__right__items__text__name
+              = item_outfit.item.text
+      
+          -# = link_to (image_tag item_outfit.item.image.url), item_path(item.id)
+      

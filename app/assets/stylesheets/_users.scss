@@ -275,9 +275,12 @@
       margin-top: 20px;
 
       .mypage-outfits {
-        width: 280px;
-        margin-left: 10px;
-        margin-bottom: 10px;
+
+        img {
+          width: 280px;
+          margin-left: 10px;
+          margin-bottom: 10px;
+        }
       }
     }
   }

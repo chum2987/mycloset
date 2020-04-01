@@ -28,7 +28,7 @@
     .user__items__content
       - @items.each do |item|
         .user__items__content__details
-          = image_tag item.image.url
+          = link_to (image_tag item.image.url), item_path(item.id)
           .user__items__content__details__text
             .user__items__content__details__text__brand
               = item.brand
@@ -43,6 +43,7 @@
       コーディネート
     .user__outfits__content
       - @outfits.each do |outfit|
-        = image_tag outfit.image.url, class: "mypage-outfits"
+        = link_to (image_tag outfit.image.url), outfit_path(outfit.id), class: "mypage-outfits"
+        -# = link_to image_tag outfit.image.url, class: "mypage-outfits"
 
 

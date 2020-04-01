@@ -14,6 +14,9 @@ class ItemsController < ApplicationController
     @items = user.items.all.order(created_at: :desc)
   end
 
+  def show
+  end
+
   private
 
   def item_params

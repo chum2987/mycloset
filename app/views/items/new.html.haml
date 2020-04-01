@@ -8,47 +8,51 @@
       .new-item__content__bottom
         .new-item__content__bottom__gender
           = f.label :gender, :メンズ
-          = f.radio_button :gender, 1
+          = f.radio_button :gender, "メンズ"
           = f.label :gender, :レディース
-          = f.radio_button :gender, 2
+          = f.radio_button :gender, "レディース"
         .new-item__content__bottom__category
           = f.label :clothes, :トップス
-          = f.radio_button :clothes, 1
+          = f.radio_button :clothes, "トップス"
           = f.label :clothes, :ボトムス
-          = f.radio_button :clothes, 2
+          = f.radio_button :clothes, "ボトムス"
+          = f.label :clothes, :ワンピース
+          = f.radio_button :clothes, "ワンピース"
           = f.label :clothes, :アウター
-          = f.radio_button :clothes, 3
+          = f.radio_button :clothes, "アウター"
           = f.label :clothes, :シューズ
-          = f.radio_button :clothes, 4
+          = f.radio_button :clothes, "シューズ"
           = f.label :clothes, :バッグ
-          = f.radio_button :clothes, 5
+          = f.radio_button :clothes, "バッグ"
         .new-item__content__bottom__color
           = f.label :color, :ホワイト
-          = f.radio_button :color, 1
+          = f.radio_button :color, "ホワイト"
           = f.label :color, :グレー
-          = f.radio_button :color, 2
+          = f.radio_button :color, "グレー"
           = f.label :color, :ブラック
-          = f.radio_button :color, 3
+          = f.radio_button :color, "ブラック"
           = f.label :color, :ブルー
-          = f.radio_button :color, 4
+          = f.radio_button :color, "ブルー"
           = f.label :color, :ネイビー
-          = f.radio_button :color, 5
+          = f.radio_button :color, "ネイビー"
           = f.label :color, :レッド
-          = f.radio_button :color, 6
+          = f.radio_button :color, "レッド"
           = f.label :color, :ピンク
-          = f.radio_button :color, 7
+          = f.radio_button :color, "ピンク"
           = f.label :color, :グリーン
-          = f.radio_button :color, 8
+          = f.radio_button :color, "グリーン"
           = f.label :color, :イエロー
-          = f.radio_button :color, 9
+          = f.radio_button :color, "イエロー"
           = f.label :color, :オレンジ
-          = f.radio_button :color, 10
+          = f.radio_button :color, "オレンジ"
           = f.label :color, :パープル
-          = f.radio_button :color, 11
+          = f.radio_button :color, "パープル"
+          = f.label :color, :ベージュ
+          = f.radio_button :color, "ベージュ"
           = f.label :color, :ブラウン
-          = f.radio_button :color, 12
+          = f.radio_button :color, "ブラウン"
           = f.label :color, :その他
-          = f.radio_button :color, 13
+          = f.radio_button :color, "その他"
         .new-item__content__bottom__brand
           = f.text_field :brand, placeholder: "ブランド名", class: "brand-text-box"
         .new-item__content__bottom__text

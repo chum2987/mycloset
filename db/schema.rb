@@ -23,10 +23,10 @@ ActiveRecord::Schema.define(version: 2020_04_01_083246) do
 
   create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "image", null: false
-    t.integer "gender", null: false
-    t.integer "clothes", null: false
-    t.integer "color", null: false
-    t.text "brand"
+    t.string "gender", null: false
+    t.string "clothes", null: false
+    t.string "color", null: false
+    t.string "brand"
     t.text "text"
     t.bigint "user_id"
     t.datetime "created_at", null: false

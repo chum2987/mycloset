@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: "outfits#index"
   resources :outfits, only: [:index, :new, :create, :show]
   resources :users, only: [:show, :edit, :update] 
-  resources :items, only:[:new, :create] do
+  resources :items, only:[:new, :create, :show] do
     member do
       get 'closet'
     end

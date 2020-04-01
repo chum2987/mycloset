@@ -2,7 +2,7 @@ class OutfitsController < ApplicationController
 
   def index
     @outfits = Outfit.all.order("created_at DESC")
-    # @users = User.all
+    # @users = User.all 
   end
 
   def new
@@ -15,6 +15,9 @@ class OutfitsController < ApplicationController
   end
 
   def show
+    # user = User.find(params[:id])
+    # @outfits = user.outfits
+    # @outfit = @outfits.find(params[:id])
     @outfit = Outfit.find(params[:id])
   end
 
