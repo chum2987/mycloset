@@ -6,6 +6,51 @@
           = icon("far", "image", class: "icon")
           = f.file_field :image, class: "file"
       .new-item__content__bottom
+        .new-item__content__bottom__gender
+          = f.label :gender, :メンズ
+          = f.radio_button :gender, 1
+          = f.label :gender, :レディース
+          = f.radio_button :gender, 2
+        .new-item__content__bottom__category
+          = f.label :clothes, :トップス
+          = f.radio_button :clothes, 1
+          = f.label :clothes, :ボトムス
+          = f.radio_button :clothes, 2
+          = f.label :clothes, :アウター
+          = f.radio_button :clothes, 3
+          = f.label :clothes, :シューズ
+          = f.radio_button :clothes, 4
+          = f.label :clothes, :バッグ
+          = f.radio_button :clothes, 5
+        .new-item__content__bottom__color
+          = f.label :color, :ホワイト
+          = f.radio_button :color, 1
+          = f.label :color, :グレー
+          = f.radio_button :color, 2
+          = f.label :color, :ブラック
+          = f.radio_button :color, 3
+          = f.label :color, :ブルー
+          = f.radio_button :color, 4
+          = f.label :color, :ネイビー
+          = f.radio_button :color, 5
+          = f.label :color, :レッド
+          = f.radio_button :color, 6
+          = f.label :color, :ピンク
+          = f.radio_button :color, 7
+          = f.label :color, :グリーン
+          = f.radio_button :color, 8
+          = f.label :color, :イエロー
+          = f.radio_button :color, 9
+          = f.label :color, :オレンジ
+          = f.radio_button :color, 10
+          = f.label :color, :パープル
+          = f.radio_button :color, 11
+          = f.label :color, :ブラウン
+          = f.radio_button :color, 12
+          = f.label :color, :その他
+          = f.radio_button :color, 13
+        .new-item__content__bottom__brand
+          = f.text_field :brand, placeholder: "ブランド名", class: "brand-text-box"
         .new-item__content__bottom__text
           = f.text_field :text, placeholder: "説明", class: "item-text-box"
         .new-item__content__bottom__send-btn
