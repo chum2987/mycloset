@@ -222,7 +222,6 @@
   .user__items {
     width: 100%;
     height: 480px;
-    // background-color: rgb(206, 204, 204);
     padding: 30px;
 
     &__text {
@@ -231,10 +230,10 @@
 
     &__content {
       display: flex;
-      justify-content: space-between;
       margin-top: 20px;
 
       &__details {
+        margin-left: 10px;
 
         &__image {
 
