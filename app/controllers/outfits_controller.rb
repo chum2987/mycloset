@@ -2,6 +2,7 @@ class OutfitsController < ApplicationController
 
   def index
     @outfits = Outfit.all.order("created_at DESC")
+    # @outfit = Outfit.find(params[:id])
     # @users = User.all 
   end
 
@@ -19,6 +20,7 @@ class OutfitsController < ApplicationController
     # @outfits = user.outfits
     # @outfit = @outfits.find(params[:id])
     @outfit = Outfit.find(params[:id])
+    @like = Like.new
   end
 
   private
