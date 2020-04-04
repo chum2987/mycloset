@@ -1,0 +1,6 @@
+.search-result
+  %ul.search-result__show
+    - @items.each do |item|
+      %li.search-result__show__item
+        = link_to (image_tag item.image.url)
+        -# , item_path(@item)

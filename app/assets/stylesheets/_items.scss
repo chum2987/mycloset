@@ -71,3 +71,28 @@
     }
   }
 }
+
+.search-result {
+  padding-top: 64px;
+
+  ul {
+    // background-color:pink;
+    margin: 60px 100px;
+    display: flex;
+
+    li {
+
+    }
+  }
+
+  &__show {
+
+    &__item{
+
+      img {
+        margin-left: 10px;
+        margin-top: 10px;
+      }
+    }
+  }
+}

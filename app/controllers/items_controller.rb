@@ -17,6 +17,11 @@ class ItemsController < ApplicationController
   def show
   end
 
+  def search
+    @items = Item.search(params[:search])
+
+  end
+
   private
 
   def item_params
