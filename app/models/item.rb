@@ -5,6 +5,8 @@ class Item < ApplicationRecord
 
   mount_uploader :image, ImageUploader
 
+  validates :image, :gender, :clothes, :color, presence: true
+
   def self.search(search) 
     if search 
       Item.where(['gender LIKE ? OR clothes LIKE ? OR color LIKE ? OR brand LIKE ? OR text LIKE ?', "%#{search}%", "%#{search}%","%#{search}%","%#{search}%", "%#{search}%"])
