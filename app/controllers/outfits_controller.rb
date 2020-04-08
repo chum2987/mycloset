@@ -23,6 +23,12 @@ class OutfitsController < ApplicationController
     @like = Like.new
   end
 
+  def destroy
+    outfit = Outfit.find(params[:id])
+    outfit.destroy
+    redirect_to root_path
+  end
+
   private
 
   def outfit_params

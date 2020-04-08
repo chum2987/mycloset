@@ -26,6 +26,8 @@
               = item_outfit.item.brand
             .outfits-details__content__right__items__text__name
               = item_outfit.item.text
-      
-          -# = link_to (image_tag item_outfit.item.image.url), item_path(item.id)
+
+    .outfits-details__content__bottom
+      = link_to "削除する", outfit_path(@outfit.id), method: :delete
+
       
