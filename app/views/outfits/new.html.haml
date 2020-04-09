@@ -6,6 +6,30 @@
           .new-outfits__content__main__left__post-image
             = f.label :image, class: "image-icon" do
               = icon("far", "image", class: "post-icon")
+              = f.file_field :image, class: "file_field", id:"outfit_img"
+
+              - if @outfit.image.present?
+                = image_tag @outfit.image.url, id: "img_prev"
+              - else
+                = image_tag src="/assets/sample.jpg", id: "img_prev"
+        
+        .new-outfits__content__main__right
+          .new-outfits__content__main__right__items
+            = f.text_area :text, placeholder: "アイテム詳細", class: "text_area"
+          .new-outfits__content__main__right__text
+            = f.text_field :content, placeholder: "ひとこと", class: "text_field"
+      .new-outfits__send-btn
+        = f.submit "send", class: "submit"
+
+
+.new-outfits
+  = form_for @outfit do |f|
+    .new-outfits__content
+      .new-outfits__content__main
+        .new-outfits__content__main__left
+          .new-outfits__content__main__left__post-image
+            = f.label :image, class: "image-icon" do
+              = icon("far", "image", class: "post-icon")
               = f.file_field :image, class: "file_field"
         .new-outfits__content__main__right
           .new-outfits__content__main__right__items
