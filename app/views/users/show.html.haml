@@ -8,11 +8,12 @@
       .user__details__profiles__top
         .user__details__profiles__top__name
           = @user.name
-        .user__details__profiles__top__edit
-          .user__details__profiles__top__edit__icon
-            = icon("fas", "cog")
-          .user__details__profiles__top__edit__text
-            = link_to "プロフィールを編集する", edit_user_path, class: "edit-btn"
+        - if user_signed_in? && current_user.id ==  @user.id
+          .user__details__profiles__top__edit
+            .user__details__profiles__top__edit__icon
+              = icon("fas", "cog")
+            .user__details__profiles__top__edit__text
+              = link_to "プロフィールを編集する", edit_user_path, class: "edit-btn"
       .user__details__profiles__middle
         .user__details__profiles__middle__outfits-count
           投稿 20件
