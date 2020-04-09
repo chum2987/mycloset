@@ -28,6 +28,7 @@
               = item_outfit.item.text
 
     .outfits-details__content__bottom
-      = link_to "削除する", outfit_path(@outfit.id), method: :delete
+      - if user_signed_in? && current_user.id == @outfit.user_id
+        = link_to "削除する", outfit_path(@outfit.id), method: :delete
 
       
