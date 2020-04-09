@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resources :likes, only: [:create, :destroy]
   end
   resources :users, only: [:show, :edit, :update] 
-  resources :items, only:[:new, :create, :show] do
+  resources :items, only:[:new, :create, :show, :destroy] do
     member do
       get 'closet'
     end

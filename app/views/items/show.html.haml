@@ -1,0 +1,19 @@
+.item-details
+  .item-details__left
+    .item-details__left__image
+      = image_tag @item.image.url
+  .item-details__right
+    .item-details__right__gender
+      = @item.gender
+    .item-details__right__clothes
+      = @item.clothes
+    .item-details__right__color
+      = @item.color
+    .item-details__right__brand
+      = @item.brand
+    .item-details__right__text
+      = @item.text
+  - if user_signed_in? && current_user.id == @item.user.id
+    .item-details__bottom
+      .item-details__bottom__button
+        = link_to "削除する", item_path(@item.id), method: :delete
