@@ -133,8 +133,7 @@
                 .content__text__outfits-likes__icon
                   = icon("far", "heart")
                 .content__text__outfits-likes__count
-                  -# = @outfit.likes.count
-                  100
+                  = outfit.likes.count
 
     -# .search
     -#   .search__top

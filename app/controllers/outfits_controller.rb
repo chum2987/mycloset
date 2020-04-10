@@ -3,6 +3,7 @@ class OutfitsController < ApplicationController
   def index
     @outfits = Outfit.all.order("created_at DESC")
     @outfits_ranking = Outfit.find(Like.group(:outfit_id).order('count(outfit_id) desc').limit(3).pluck(:outfit_id))
+    @users = User.all
   end
 
   def new
