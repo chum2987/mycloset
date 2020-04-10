@@ -3,7 +3,6 @@
   .user__details
     .user__details__image
       = image_tag @user.image.url, class: "my-page-image"
-      -# = image_tag src="/assets/image1.jpg", width:"400"
     .user__details__profiles
       .user__details__profiles__top
         .user__details__profiles__top__name
@@ -16,7 +15,10 @@
               = link_to "プロフィールを編集する", edit_user_path, class: "edit-btn"
       .user__details__profiles__middle
         .user__details__profiles__middle__outfits-count
-          投稿 20件
+          .user__details__profiles__middle__outfits-count__left
+            投稿
+          .user__details__profiles__middle__outfits-count__right
+            = @item_count
         .user__details__profiles__middle__item-count
           アイテム 20件
       .user__details__profiles__bottom
