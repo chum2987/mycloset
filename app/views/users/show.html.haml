@@ -53,9 +53,17 @@
   .user__outfits
     .user__outfits__text
       コーディネート
-    .user__outfits__content
+    %ul.user__outfits__content
       - @outfits.each do |outfit|
-        = link_to (image_tag outfit.image.url), outfit_path(outfit.id), class: "mypage-outfits"
-        -# = link_to image_tag outfit.image.url, class: "mypage-outfits"
-
+        %li.user__outfits__content__detail
+          .user__outfits__content__detail__image
+            = link_to (image_tag outfit.image.url), outfit_path(outfit.id), class: "mypage-outfits"
+          .user__outfits__content__detail__bottom
+            .user__outfits__content__detail__bottom__date
+              = outfit.created_at.strftime('%Y/%m/%d')
+            .user__outfits__content__detail__bottom__likes
+              .user__outfits__content__detail__bottom__likes__icon
+                = icon("far", "heart")
+              .user__outfits__content__detail__bottom__likes__count
+                = outfit.likes.count
 

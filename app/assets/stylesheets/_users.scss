@@ -271,16 +271,56 @@
 
     }
 
+    ul {
+
+      li {
+        float: left;
+
+      }
+    }
+
     &__content {
       margin-top: 20px;
 
-      .mypage-outfits {
+      
+      &__detail {
+        margin-left: 10px;
+        margin-bottom: 20px;
 
-        img {
-          width: 280px;
-          margin-left: 10px;
-          margin-bottom: 10px;
+        &__image {
+
+          .mypage-outfits {
+            
+            img {
+              width: 280px;
+              height: 380px;
+            }
+          }
         }
+        &__bottom {
+          display: flex;
+          justify-content: space-between;
+          padding: 0 20px;
+
+          
+          &__date {
+            
+          }
+          
+          &__likes {
+            display: flex;
+
+            &__icon {
+
+            }
+
+            &__count {
+
+            }
+          }
+        }
+        
+        
       }
     }
   }
