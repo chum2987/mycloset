@@ -2,8 +2,7 @@ class OutfitsController < ApplicationController
 
   def index
     @outfits = Outfit.all.order("created_at DESC")
-    # @outfit = Outfit.find(params[:id])
-    # @users = User.all 
+    @outfits_ranking = Outfit.find(Like.group(:outfit_id).order('count(outfit_id) desc').limit(3).pluck(:outfit_id))
   end
 
   def new
@@ -16,9 +15,6 @@ class OutfitsController < ApplicationController
   end
 
   def show
-    # user = User.find(params[:id])
-    # @outfits = user.outfits
-    # @outfit = @outfits.find(params[:id])
     @outfit = Outfit.find(params[:id])
     @like = Like.new
   end
