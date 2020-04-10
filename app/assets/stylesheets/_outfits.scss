@@ -83,7 +83,7 @@
         //コーディネートランキング
         .outfits__ranking {
           width: 100%;
-          height: 400px;
+          height: 500px;
           margin-bottom: 20px;
           
           &__top {
@@ -105,14 +105,24 @@
 
             &__image {
 
+              img {
+                width: 280px;
+                height: 380px;
+              }
+
             }
 
             &__bottom {
               display: flex;
               justify-content: space-between;
+              padding: 0 20px;
 
               &__user-name {
 
+                a {
+                  color: black;
+                  text-decoration: none;
+                }
               }
 
               &__right {
