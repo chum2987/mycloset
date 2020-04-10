@@ -209,11 +209,46 @@
         margin-bottom: 20px;
 
         &__outfits-count {
-          
+          display: flex;
+
+          &__left {
+
+          }
+
+          &__right {
+            display: flex;
+            margin-left: 10px;
+
+            &__number {
+
+            }
+
+            &__text {
+
+            }
+          }
         }
 
         &__item-count {
           margin-left: 30px;
+          display: flex;
+
+          &__left {
+
+          }
+
+          &__right {
+            display: flex;
+            margin-left: 10px;
+
+            &__number {
+
+            }
+
+            &__text {
+
+            }
+          }
         }
       }
     }
