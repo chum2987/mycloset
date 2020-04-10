@@ -25,7 +25,8 @@
                 .outfits__ranking__details__bottom__right__icon
                   = icon("far", "heart")
                 .outfits__ranking__details__bottom__right__count
-                  100
+                  = outfit.likes.count
+                  //ボタン追加予定
               
         
     -# .item__ranking
