@@ -18,9 +18,18 @@
           .user__details__profiles__middle__outfits-count__left
             投稿
           .user__details__profiles__middle__outfits-count__right
-            = @item_count
+            .user__details__profiles__middle__outfits-count__right__number
+              = @outfits_count
+            .user__details__profiles__middle__outfits-count__right__text
+              件
         .user__details__profiles__middle__item-count
-          アイテム 20件
+          .user__details__profiles__middle__item-count__left
+            アイテム
+          .user__details__profiles__middle__item-count__right
+            .user__details__profiles__middle__item-count__right__number
+              = @items_count
+            .user__details__profiles__middle__item-count__right__text
+              件
       .user__details__profiles__bottom
         .user__details__profiles__bottom__text
           = @user.text

@@ -4,7 +4,8 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @outfits = @user.outfits.all.order("created_at DESC")
     @items = @user.items.all.order(created_at: :desc).limit(6)
-    @item_count = @user.items.count
+    @outfits_count = @user.outfits.count
+    @items_count = @user.items.count
   end
 
   def edit
