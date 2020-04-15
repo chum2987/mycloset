@@ -122,10 +122,10 @@
 ### Association
 - has_many :items
 
-## categoriesテーブル
+<!-- ## categoriesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |type|string|null: false|
 |item_id|references|null: false, foreign_key:true|
 ### Association
-- has_many :items
+- has_many :items -->
