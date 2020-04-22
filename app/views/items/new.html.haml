@@ -5,12 +5,14 @@
         = f.label :image, class: "item-icon" do
           = icon("far", "image", class: "icon")
           = f.file_field :image, class: "file"
+
       .new-item__content__bottom
         .new-item__content__bottom__gender
           = f.label :gender, :メンズ
           = f.radio_button :gender, "メンズ"
           = f.label :gender, :レディース
           = f.radio_button :gender, "レディース"
+
         .new-item__content__bottom__category
           = f.label :clothes, :トップス
           = f.radio_button :clothes, "トップス"
@@ -24,6 +26,7 @@
           = f.radio_button :clothes, "シューズ"
           = f.label :clothes, :バッグ
           = f.radio_button :clothes, "バッグ"
+
         .new-item__content__bottom__color
           = f.label :color, :ホワイト
           = f.radio_button :color, "ホワイト"
@@ -53,10 +56,13 @@
           = f.radio_button :color, "ブラウン"
           = f.label :color, :その他
           = f.radio_button :color, "その他"
+
         .new-item__content__bottom__brand
           = f.text_field :brand, placeholder: "ブランド名", class: "brand-text-box"
+          
         .new-item__content__bottom__text
           = f.text_field :text, placeholder: "説明", class: "item-text-box"
+          
         .new-item__content__bottom__send-btn
           = f.submit "send", class: "item-send"
       
