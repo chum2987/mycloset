@@ -115,9 +115,9 @@
 ### Association
 - has_many :items
 
-## brandsテーブル
+<!-- ## brandsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string||
 ### Association
-- has_many :items
+- has_many :items -->
