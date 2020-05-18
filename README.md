@@ -67,7 +67,6 @@
 - has_many: item_comments
 - has_many :outfits, through: :item_outfits
 - belongs_to :size
-- belongs_to :brand
 - belongs_to :category
 - has_many :color_items
 - has_many :colors, through: :color_items
@@ -114,10 +113,3 @@
 |type|string||
 ### Association
 - has_many :items
-
-<!-- ## brandsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|name|string||
-### Association
-- has_many :items -->
