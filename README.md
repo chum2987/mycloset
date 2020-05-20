@@ -106,10 +106,3 @@
 ### Association
 - belongs_to :color
 - belongs_to :item
-
-## sizesテーブル
-|Column|Type|Options|
-|------|----|-------|
-|type|string||
-### Association
-- has_many :items
