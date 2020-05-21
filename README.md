@@ -90,14 +90,6 @@
 - belongs_to :item
 - belongs_to :user
 
-## colorsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|type|string|null: false|
-### Association
-- has_many :items, through: :color_items
-- has_many :color_items
-
 ## color_itemsテーブル
 |Column|Type|Options|
 |------|----|-------|
